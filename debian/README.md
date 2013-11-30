@@ -23,6 +23,9 @@ Based on scripts in a forum post, but packaged for debian / raspbian.
 
 For the impatient (in your ~/.xsession file):
 
+`# direct control of HDMI / framebuffer needs special permissions`  
+`sudo adduser $USER video`  
+
 `# start xscreensaver`  
 `xscreensaver &`  
 
