@@ -1,0 +1,19 @@
+#!/bin/sh
+
+#hdmi_on.sh - custom script to turn HDMI on 
+
+#get the current tv state
+TVSTATE=`tvservice -s | grep HDMI | wc -l`
+
+#only turn on if its not already on
+if [ "$TVSTATE" -eq 0 ] 
+then
+   tvservice --preferred
+   fbset -depth 8
+   fbset -depth 16
+   xrefresh
+else
+   echo "HDMI already on";
+fi
+
+exit;

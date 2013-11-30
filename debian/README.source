@@ -1,0 +1,11 @@
+xscreensaver-pi-hdmi for Debian
+-------------------------------
+
+Designed to be "adjacent to" xscreensaver.
+
+Uses hdmi-on / hdmi-off (placed in /usr/lib/{pkg}).
+
+These are thin shells around tvservice from package libraspberrypi-bin.
+
+
+

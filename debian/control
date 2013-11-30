@@ -1,0 +1,17 @@
+Source: xscreensaver-pi-hdmi
+Section: x11
+Priority: extra
+Maintainer: Robert Ames <ramses0@yahoo.com>
+Build-Depends: debhelper (>= 8.0.0), ruby-ronn (>= 0.7.3)
+Standards-Version: 3.9.3
+Homepage: http://www.raspberrypi.org/phpBB3/viewtopic.php?t=56944&p=429723
+#Vcs-Git: git://git.debian.org/collab-maint/xscreensaver-pi-hdmi.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/xscreensaver-pi-hdmi.git;a=summary
+
+Package: xscreensaver-pi-hdmi
+Architecture: all
+Depends: ${misc:Depends}
+Description: Turn on/off Raspberry Pi HDMI port based on xscreensaver state
+ Raspberry Pi requires some special command execution to physically
+ turn on / off HDMI ports.  This utility cooperates with xscreensaver
+ to physically turn off and on the HDMI output when necessary.
