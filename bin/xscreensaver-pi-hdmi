@@ -1,7 +1,27 @@
 #!/bin/bash
 
+usage() {
+	PROG=`basename $0`
+	echo "Usage: $PROG [duration_s]"
+	echo "Disable RaspberryPi HDMI port after xscreensaver starts."
+	echo "Example: $PROG 300"
+	echo ""
+	echo "Options:"
+	echo "  -h, --help   This help text"
+}
+
+if [[ "-h" == "$1" || "--help" == "$1" ]] ; then
+	usage
+	exit
+fi
+DURATION_S=300
+if [[ "" != "$1" && $1 =~ ^[0-9]+$ ]] ; then
+	DURATION_S=$1
+fi
+
 TEMPFILE=`tempfile --prefix=hdmi. --suffix=.pid`
 echo 0 > $TEMPFILE
+
 
 interrupt_potential_sleeping_processes() {
     SLEEP_PID=0
@@ -16,7 +36,8 @@ interrupt_potential_sleeping_processes() {
 
 
 hdmi_off() {
-    tvservice --off
+    # no --quiet switch
+    tvservice --off > /dev/null
 }
 
 
@@ -27,7 +48,8 @@ hdmi_on() {
 
     # if HDMI was not found, RESULT=1 ... turn it back on
     if [ "$RESULT" -eq 1 ] ; then
-       tvservice --preferred
+       # no --quiet switch
+       tvservice --preferred > /dev/null
        fbset -depth 8
        fbset -depth 16
        xrefresh
@@ -53,9 +75,8 @@ hdmi_on
 # see fancy process substitution down below
 while read line ; do
     if [[ $line =~ ^BLANK ]] ; then
-        echo "AAA $line XXX - blank"
         (
-            sleep 3 
+            sleep $DURATION_S
             hdmi_off
             echo 0 > $TEMPFILE
         ) &

@@ -1,3 +1,9 @@
+xscreensaver-pi-hdmi (0.2) unstable; urgency=low
+
+  * Rewritten as a single bash script.
+
+ -- Robert Ames <ramses0@yahoo.com>  Sun, 1 Dec 2013 04:34:32 +0000
+
 xscreensaver-pi-hdmi (0.1) unstable; urgency=low
 
   * Initial Release.
