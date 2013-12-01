@@ -74,7 +74,7 @@ hdmi_on
 
 # see fancy process substitution down below
 while read line ; do
-    if [[ $line =~ ^BLANK ]] ; then
+    if [[ $line =~ ^BLANK || $line =~ ^LOCK ]] ; then
         (
             sleep $DURATION_S
             hdmi_off
