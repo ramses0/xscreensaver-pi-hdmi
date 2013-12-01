@@ -35,14 +35,15 @@ For the impatient (in your ~/.xsession file):
 AUTHOR
 ------
 
-http://www.raspberrypi.org/phpBB3/viewtopic.php?t=56944&p=429723  
-by simonmcc » Mon Sep 30, 2013 7:49 am and Robert Ames <ramses0@yahoo.com>  
+Initial inspiration from simonmcc » Mon Sep 30, 2013 7:49 am   
+(http://www.raspberrypi.org/phpBB3/viewtopic.php?t=56944&p=429723)  
+Bash implementation and Debian packaging by Robert Ames <ramses0@yahoo.com>  
 
-REPOTING BUGS
--------------
+REPORTING BUGS
+--------------
 
-The project is hosted on github/.... and issues / pull requests
-should be directed there.
+The project is hosted at https://github.com/ramses0/xscreensaver-pi-hdmi/
+Issues and pull requests should be directed there.
 
 It is an open question as to whether there is a better place to put
 this "fix" ie: integrate directly into xscreensaver or where it makes
