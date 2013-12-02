@@ -21,10 +21,12 @@ Based on scripts in a forum post, but packaged for debian / raspbian.
   http://www.raspberrypi.org/phpBB3/viewtopic.php?t=56944&p=429723  
   by simonmcc » Mon Sep 30, 2013 7:49 am  
 
-For the impatient (in your ~/.xsession file):
+For the impatient:
 
 `# direct control of HDMI / framebuffer needs special permissions`  
 `sudo adduser $USER video`  
+
+In your ~/.xsession file:
 
 `# start xscreensaver`  
 `xscreensaver &`  
