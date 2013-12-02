@@ -4,7 +4,7 @@ xscreensaver-pi-hdmi(1) -- disable RaspberryPi HDMI after xscreensaver
 SYNOPSIS
 --------
 
-`xscreensaver-pi-hdmi` [DELAY\_S]
+`xscreensaver-pi-hdmi` [delay\_s]
 
 DESCRIPTION
 -----------
