@@ -4,7 +4,7 @@ Priority: extra
 Maintainer: Robert Ames <ramses0@yahoo.com>
 Build-Depends: debhelper (>= 8.0.0), ruby-ronn (>= 0.7.3)
 Standards-Version: 3.9.3
-Homepage: https://github.com/ramses0/xscreensaver-pi-hdmi/blob/master/debian/README.md
+Homepage: https://github.com/ramses0/xscreensaver-pi-hdmi/
 Vcs-Git: git://github.com/ramses0/xscreensaver-pi-hdmi.git
 Vcs-Browser: https://github.com/ramses0/xscreensaver-pi-hdmi
 
